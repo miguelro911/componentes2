@@ -1,0 +1,7 @@
+package inv.presentacion;
+
+import api.com.cableado.login;
+
+public class Login implements login {
+
+}

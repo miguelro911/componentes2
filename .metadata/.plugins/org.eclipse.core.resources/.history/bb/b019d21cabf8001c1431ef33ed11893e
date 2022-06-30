@@ -1,0 +1,12 @@
+package org.presentacion;
+
+import api.com.cableado.IModerador;
+
+public class Orquestador implements IModerador {
+
+	@Override
+	public void moderar() {
+		
+	}
+
+}

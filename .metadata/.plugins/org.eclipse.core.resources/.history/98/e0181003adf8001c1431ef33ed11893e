@@ -1,0 +1,33 @@
+package org.presentacion;
+
+import javax.swing.JOptionPane;
+
+import api.com.cableado.IModerador;
+import api.com.cableado.login;
+import api.com.utilidades.Cargador;
+
+public class Orquestador implements IModerador {
+
+	@Override
+	public void moderar() {
+		Cargador crg = new Cargador("front");
+
+		// Para traer login
+		try {
+			Class cls = crg.getClase(login.class.getName());
+			login com = (login) cls.newInstance();
+			com.logear();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "no hay login");
+		}
+	}
+
+
+	public static void main(String[] args) {
+		new Orquestador().moderar();
+	}
+	
+}
+
+
+
